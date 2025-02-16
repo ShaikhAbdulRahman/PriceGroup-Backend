@@ -10,6 +10,9 @@ connectDB();
 app.use(express.json());
 app.use(cors());
 
+app.get("/",(req,res)=>{
+  res.json("Hello")
+})
 app.use('/price-group', priceGroupRoutes);
 
 const PORT = process.env.PORT || 4000;
